@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e3l-gV-npi">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Temperature Converter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TemperatureConverter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sun" translatesAutoresizingMaskIntoConstraints="NO" id="Ivt-B0-1U4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Converter from °C to °F to K." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idX-Ih-Hhi">
+                                <rect key="frame" x="16" y="112" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="IS5-X2-1eJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="e7M-64-KKS"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 °C" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iev-ai-TmC">
+                                <rect key="frame" x="16" y="208" width="343" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="D7g-OT-jQc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="qUN-Hn-03G"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="-50" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="JDx-ju-uEf">
+                                <rect key="frame" x="14" y="264" width="347" height="30"/>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="6cx-lJ-h9R"/>
+                                    <constraint firstAttribute="height" constant="29" id="klo-Xm-M2D"/>
+                                </constraints>
+                                <imageReference key="minimumValueImage" image="sun.min" catalog="system" symbolScale="small"/>
+                                <imageReference key="maximumValueImage" image="sun.max" catalog="system" symbolScale="large"/>
+                                <color key="minimumTrackTintColor" systemColor="labelColor"/>
+                                <color key="thumbTintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <action selector="sliderValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="HSy-t6-dS5"/>
+                                </connections>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5fz-e3-ma4">
+                                <rect key="frame" x="16" y="620" width="343" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="bgT-MB-mZU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="288" id="smp-5T-RBV"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Fahrenheit"/>
+                                    <segment title="Kelvin"/>
+                                </segments>
+                                <color key="selectedSegmentTintColor" systemColor="secondarySystemBackgroundColor"/>
+                                <connections>
+                                    <action selector="segmentValueChange:" destination="BYZ-38-t0r" eventType="valueChanged" id="Mi7-gc-N1l"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 °F" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LGF-DW-MeL">
+                                <rect key="frame" x="127.5" y="317" width="120" height="48"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="8n9-nJ-38r"/>
+                                    <constraint firstAttribute="width" constant="120" id="FqN-Zy-LIH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ivt-B0-1U4" secondAttribute="trailing" id="5w1-i9-GTC"/>
+                            <constraint firstItem="LGF-DW-MeL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8P9-AD-n8W"/>
+                            <constraint firstItem="JDx-ju-uEf" firstAttribute="top" secondItem="Iev-ai-TmC" secondAttribute="bottom" constant="8" symbolic="YES" id="8tW-G7-Mnf"/>
+                            <constraint firstItem="Iev-ai-TmC" firstAttribute="top" secondItem="idX-Ih-Hhi" secondAttribute="bottom" constant="48" id="AxU-YW-0hQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5fz-e3-ma4" secondAttribute="trailing" constant="16" id="DxD-xY-rnN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="idX-Ih-Hhi" secondAttribute="trailing" constant="16" id="NL3-Lx-woN">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Iev-ai-TmC" secondAttribute="trailing" constant="16" id="O7p-Nl-fe5">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5fz-e3-ma4" secondAttribute="bottom" constant="16" id="PzG-nY-aNp"/>
+                            <constraint firstItem="idX-Ih-Hhi" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="SBT-vM-Xpr"/>
+                            <constraint firstAttribute="bottom" secondItem="Ivt-B0-1U4" secondAttribute="bottom" id="Smx-gE-GHH"/>
+                            <constraint firstItem="Iev-ai-TmC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="VPk-1M-epU">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="Ivt-B0-1U4" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="WDd-Zz-PeW"/>
+                            <constraint firstItem="LGF-DW-MeL" firstAttribute="top" secondItem="JDx-ju-uEf" secondAttribute="bottom" constant="24" id="aRy-ca-15W"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JDx-ju-uEf" secondAttribute="trailing" constant="16" id="bmd-gR-aei">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="5fz-e3-ma4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="gCx-8e-MkQ"/>
+                            <constraint firstItem="JDx-ju-uEf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="hW4-rX-0eC">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                            <constraint firstItem="Ivt-B0-1U4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="o3g-O4-1l3"/>
+                            <constraint firstItem="idX-Ih-Hhi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="uBP-O4-Ew0">
+                                <variation key="heightClass=regular-widthClass=regular" constant="150"/>
+                            </constraint>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Temperature Converter" id="bEC-WL-Qn2"/>
+                    <connections>
+                        <outlet property="celsiusLabel" destination="Iev-ai-TmC" id="0WC-bS-NJi"/>
+                        <outlet property="convertedTempLabel" destination="LGF-DW-MeL" id="2y4-Lv-JxA"/>
+                        <outlet property="tempSegmentControl" destination="5fz-e3-ma4" id="U3o-F4-WTc"/>
+                        <outlet property="tempSlider" destination="JDx-ju-uEf" id="55E-IE-FlA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2010.4000000000001" y="91.304347826086968"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="K4L-Qw-h78">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="e3l-gV-npi" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="ThC-wd-lB8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eXF-5r-foU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DIF-Wm-fm5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1016.25" y="92.957746478873247"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sun" width="375" height="667"/>
+        <image name="sun.max" catalog="system" width="128" height="124"/>
+        <image name="sun.min" catalog="system" width="128" height="121"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondarySystemBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
