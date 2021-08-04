@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		083D12CB26BA895200B94470 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D12CA26BA895200B94470 /* AboutViewController.swift */; };
+		083D12CD26BA895D00B94470 /* ThemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083D12CC26BA895D00B94470 /* ThemeViewController.swift */; };
 		0844854C26B7F270008974A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0844854B26B7F270008974A1 /* AppDelegate.swift */; };
 		0844854E26B7F270008974A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0844854D26B7F270008974A1 /* SceneDelegate.swift */; };
 		0844855026B7F270008974A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0844854F26B7F270008974A1 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		083D12CA26BA895200B94470 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		083D12CC26BA895D00B94470 /* ThemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeViewController.swift; sourceTree = "<group>"; };
 		0844854826B7F270008974A1 /* TemperatureConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TemperatureConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0844854B26B7F270008974A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0844854D26B7F270008974A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +82,8 @@
 			isa = PBXGroup;
 			children = (
 				0844854F26B7F270008974A1 /* ViewController.swift */,
+				083D12CA26BA895200B94470 /* AboutViewController.swift */,
+				083D12CC26BA895D00B94470 /* ThemeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -161,8 +167,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				083D12CD26BA895D00B94470 /* ThemeViewController.swift in Sources */,
 				0844855026B7F270008974A1 /* ViewController.swift in Sources */,
 				0844854C26B7F270008974A1 /* AppDelegate.swift in Sources */,
+				083D12CB26BA895200B94470 /* AboutViewController.swift in Sources */,
 				0844854E26B7F270008974A1 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

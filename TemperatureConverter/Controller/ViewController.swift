@@ -60,5 +60,26 @@ class ViewController: UIViewController {
         return (fahrenheit, kelvin)
     }
     
+    
+    
+
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "aboutApp" {
+            let themeController = segue.destination as! AboutViewController
+            themeController.titleAboutText = "About the App"
+          
+            themeController.descriptionAboutText = "A useful tool when you want to convert Celsius to Fahrenheit or to Kelvin."
+        
+        }
+        
+        
+    
+    }
+    
+    
 }
 
